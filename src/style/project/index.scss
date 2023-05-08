@@ -1,0 +1,16 @@
+body {
+  @apply
+  bg-primary;
+}
+
+#index-page {
+    @apply
+    container w-full mx-auto px-5;
+
+    .container {
+        h1 {
+            @apply
+            text-white;
+        }
+    }
+}
