@@ -4,15 +4,22 @@ body {
 }
 
 #index-page {
-    @apply
-    container w-full mx-auto px-5;
+  @apply
+    bg-text
+  container w-full mx-auto px-5;
 
-    .container {
-        h1 {
-            @apply
-            font-bold
-            text-[55px]
-            text-white;
-        }
+  .container {
+    h1 {
+      @apply
+      font-bold
+      text-[55px]
+      text-white;
     }
+  }
+
+  p {
+    @apply
+    text-[25px]
+    text-primary;
+  }
 }

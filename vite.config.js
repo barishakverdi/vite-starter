@@ -15,6 +15,10 @@ export default {
         base: 'vite-starter',
     },
 
+    css: {
+        devSourcemap: true,
+    },
+
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'src/views/block'),
