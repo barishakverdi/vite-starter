@@ -12,6 +12,7 @@ export default {
         outDir: "public/",
         cssCodeSplit: true,
         ssrManifest: true,
+        base: 'vite-starter',
     },
 
     plugins: [
