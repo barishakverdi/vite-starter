@@ -1,0 +1,14 @@
+@mixin font-face($path, $font-family, $file-name, $weight, $style) {
+  @font-face {
+    font-family: $font-family;
+    src: local($path + $file-name + ".eot");
+    src: local($path + $file-name + ".eot?#iefix") format("embedded-opentype"),
+      local($path + $file-name + ".woff2") format("woff2"),
+      local($path + $file-name + ".woff") format("woff"),
+      local($path + $file-name + ".ttf") format("truetype"),
+      local($path + $file-name + ".svg#"+ $file-name + "") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
