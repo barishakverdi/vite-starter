@@ -1,6 +1,7 @@
 deployment:
   tasks:
-    script:
-      - npm install
-      - npm run build
-      - cp -a src/views/. public/
+    - npm install
+    - npm run build
+    - cp -a src/views/. public/
+    - export DEPLOYPATH=/home/barishak/vite-starter.barishakverdi.com/public
+    - /bin/cp index.html $DEPLOYPATH
