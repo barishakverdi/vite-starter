@@ -6,6 +6,7 @@ let headerStickyHeight = header.getAttribute('data-sticky-header-height');
 let whiteLogo = document.getElementById("logo-white");
 let coloredLogo = document.getElementById("logo-colored");
 let menuItem = document.querySelectorAll(".menu-item");
+
 header.style.height = headerHeight + "px";
 
 window.onscroll = function (){
@@ -30,7 +31,7 @@ window.onscroll = function (){
 
 menuItem.forEach(item => {
     item.addEventListener("mouseover", function () {
-        if (item.lastElementChild.classList.contains("sub-menu")) {
+        if (item.lastElementChild.classList.contains("sub-menu") && window.innerWidth > 1024) {
             body.classList.add("after:h-full");
         }
     })

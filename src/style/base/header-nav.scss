@@ -33,6 +33,7 @@
           p-[15px]
           bg-white
           flex flex-col
+          pointer-events-none
           transition-all ease-in-out duration-700;
 
           li {
@@ -49,6 +50,7 @@
             @apply
             h-max
             opacity-100
+            pointer-events-auto
             transition-all ease-in-out duration-700;
           }
         }
@@ -67,6 +69,7 @@ html.sticky-active {
             text-black
             transition-transform ease-in-out duration-700;
           }
+
         }
       }
     }
