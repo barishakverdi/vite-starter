@@ -1,0 +1,74 @@
+.header-nav {
+  @apply
+  w-full;
+
+  nav {
+    @apply
+    w-full h-full;
+
+    > ul {
+      @apply
+      flex
+      w-full h-full;
+
+      > .menu-item {
+        @apply
+        h-full
+        relative
+        transition-transform ease-in-out duration-700;
+
+        > a {
+          @apply
+          inline-flex items-center
+          h-full px-[15px]
+          text-white
+          transition-transform ease-in-out duration-700;
+        }
+
+        .sub-menu {
+          @apply
+          w-[190px]
+          absolute
+          opacity-0
+          p-[15px]
+          bg-white
+          flex flex-col
+          transition-all ease-in-out duration-700;
+
+          li {
+            a {
+              @apply
+              inline-flex items-center
+              py-[15px];
+            }
+          }
+        }
+
+        &:hover {
+          > .sub-menu {
+            @apply
+            h-max
+            opacity-100
+            transition-all ease-in-out duration-700;
+          }
+        }
+      }
+    }
+  }
+}
+
+html.sticky-active {
+  .header-nav {
+    nav {
+      > ul {
+        > li {
+          > a {
+            @apply
+            text-black
+            transition-transform ease-in-out duration-700;
+          }
+        }
+      }
+    }
+  }
+}

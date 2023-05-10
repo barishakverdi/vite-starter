@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+      './src/views/**/*.html',
+      './src/js/**/*.js',
       './index.html',
-      './src/views/**/*.{html,js}',
   ],
   theme: {
     extend: {
@@ -28,6 +29,10 @@ export default {
         2: "2",
         3: "3",
         4: "4",
+      },
+
+      flexGrow: {
+          1: "1",
       },
     },
   },

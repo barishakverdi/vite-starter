@@ -11,8 +11,8 @@ ij_wrap_on_typing = false
 
 [*.css]
 ij_css_align_closing_brace_with_properties = false
-ij_css_blank_lines_around_nested_selector = 1
-ij_css_blank_lines_between_blocks = 1
+ij_css_blank_lines_around_nested_selector = 2
+ij_css_blank_lines_between_blocks = 2
 ij_css_block_comment_add_space = false
 ij_css_brace_placement = end_of_line
 ij_css_enforce_quotes_on_format = false
@@ -31,7 +31,7 @@ ij_css_value_alignment = do_not_align
 
 [*.scss]
 ij_scss_align_closing_brace_with_properties = false
-ij_scss_blank_lines_around_nested_selector = 1
+ij_scss_blank_lines_around_nested_selector = 3
 ij_scss_blank_lines_between_blocks = 1
 ij_scss_block_comment_add_space = false
 ij_scss_brace_placement = 0

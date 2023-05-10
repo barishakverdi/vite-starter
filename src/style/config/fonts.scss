@@ -1,0 +1,12 @@
+//Import your all fonts like example down below. No need to touch the path.
+@include font-face("../../fonts/", "Inter", Inter-Regular, 400, normal);
+@include font-face("../../fonts/", "Inter", Inter-Light, 300, normal);
+@include font-face("../../fonts/", "Inter", Inter-Bold, 700, normal);
+
+//Your main font properties. You are free to change according to your project.
+* {
+  @apply
+  font-["Inter",sans-serif]
+  font-normal
+  text-[16px];
+}

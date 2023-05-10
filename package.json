@@ -9,13 +9,15 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "prettier": "^2.8.8"
+  },
   "devDependencies": {
     "vite-plugin-handlebars": "^1.6.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "autoprefixer": "^10.4.14",
     "editorconfig": "^1.0.2",
     "postcss": "^8.4.23",
-    "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "sass": "^1.62.1",
     "scss": "^0.2.4",

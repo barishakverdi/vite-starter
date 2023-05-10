@@ -8,11 +8,11 @@ export default {
     build: {
         sourcemap: true,
         manifest: true,
-        assetsDir: "src/",
+        assetsDir: "assets",
         outDir: "public/",
         cssCodeSplit: true,
         ssrManifest: true,
-        base: 'vite-starter',
+        base: 'src/views/',
     },
 
     css: {
