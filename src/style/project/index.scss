@@ -8,13 +8,11 @@ body {
     bg-text
   container w-full mx-auto px-5;
 
-  .container {
-    h1 {
-      @apply
-      font-bold
-      text-[55px]
-      text-white;
-    }
+  h1 {
+    @apply
+    italic
+    text-[55px]
+    text-white;
   }
 
   p {

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "serve": "vite serve src/",
+    "serve": "vite serve src/views",
     "build": "vite build",
     "preview": "vite preview"
   },
