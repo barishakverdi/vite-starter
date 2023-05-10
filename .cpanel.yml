@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/username/public_html
+    - export DEPLOYPATH=/home/barishak/vite-starter.barishakverdi/public
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -r public/* $DEPLOYPATH/
   app:
