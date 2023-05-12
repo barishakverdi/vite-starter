@@ -31,14 +31,19 @@
                         relative
                         h-full;
 
+                        a {
+                            @apply
+                            block w-full h-max;
+                        }
+
                         img {
                             @apply
-                            opacity-100 transition-all ease-in-out duration-500
+                            opacity-100 transition-all ease-in-out duration-300
                             w-[196px];
 
                             &:nth-child(2) {
                                 @apply
-                                w-0 absolute top-0;
+                                w-0 absolute;
                             }
                         }
                     }
@@ -49,6 +54,14 @@
                     }
                 }
             }
+        }
+
+        .mover {
+            @apply
+            w-full
+            pointer-events-none
+            absolute left-0 top-0 -z-1
+            transition-all ease-in-out duration-700;
         }
     }
 }
@@ -69,7 +82,7 @@ html.sticky-active {
                         .header-logo {
                             img {
                                 @apply
-                                w-0 absolute transition-all ease-in-out duration-500;
+                                w-0 absolute transition-all ease-in-out duration-300;
 
                                 &:nth-child(2) {
                                     @apply
@@ -90,7 +103,7 @@ body {
         content-['']
         absolute top-0 left-0
         w-full h-0
-        bg-black/[.8] backdrop-blur-[20px]
+        bg-white/[.2] backdrop-blur-[20px]
         pointer-events-none
         transition-all ease-in-out duration-700;
     }

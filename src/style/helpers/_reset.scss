@@ -1,5 +1,10 @@
 body {
-    @apply relative overflow-x-hidden transition-all ease-in-out duration-300;
+    @apply relative overflow-x-hidden transition-all ease-in-out duration-700;
+
+    &:after, &:before {
+        @apply
+        transition-all ease-in-out duration-700;
+    }
 }
 
 [id*="-page"] {
