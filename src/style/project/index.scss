@@ -1,22 +1,6 @@
-body {
-  @apply
-  bg-primary;
-}
-
 #index-page {
-  @apply
-    bg-text
-  container w-full mx-auto px-5;
-
-  h1 {
-    @apply
-    text-[55px]
-    text-white;
-  }
-
-  p {
-    @apply
-    text-[25px]
-    text-primary;
-  }
+    h1 {
+        @apply
+        text-dark text-[34px] font-medium
+    }
 }

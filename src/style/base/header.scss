@@ -1,97 +1,97 @@
 #header {
-  @apply
-  w-full
-  relative z-50
-  transition-all ease-in-out duration-300;
-
-  .header-body {
     @apply
-    h-full
-    relative;
-
-    .header-container {
-      @apply
-      container mx-auto px-5
-      h-full
-      flex;
-
-      .header-row {
-        @apply
-        flex flex-grow-1 justify-between
-        h-full;
-
-        .header-column {
-          @apply
-          flex-grow-1
-          h-full;
-
-          .header-logo {
-            @apply
-            flex items-center
-            relative
-            h-full;
-
-            img {
-              @apply
-              opacity-100 transition-all ease-in-out duration-500
-              w-[196px];
-
-              &:nth-child(2) {
-                @apply
-                w-0 absolute top-0;
-              }
-            }
-          }
-
-          .header-nav {
-            @apply
-            h-full;
-          }
-        }
-      }
-    }
-  }
-}
-
-html.sticky-active {
-  #header {
-    @apply
+    w-full
+    fixed z-50
     transition-all ease-in-out duration-300;
 
     .header-body {
-      @apply
-      transition-all ease-in-out duration-300
-      bg-white;
+        @apply
+        h-full
+        relative;
 
-      .header-container {
-        .header-row {
-          .header-column {
-            .header-logo {
-              img {
+        .header-container {
+            @apply
+            container mx-auto px-5
+            h-full
+            flex;
+
+            .header-row {
                 @apply
-                w-0 absolute transition-all ease-in-out duration-500;
+                flex flex-grow-1 justify-between
+                h-full;
 
-                &:nth-child(2) {
-                  @apply
-                  opacity-100 static;
+                .header-column {
+                    @apply
+                    flex-grow-1
+                    h-full;
+
+                    .header-logo {
+                        @apply
+                        flex items-center
+                        relative
+                        h-full;
+
+                        img {
+                            @apply
+                            opacity-100 transition-all ease-in-out duration-500
+                            w-[196px];
+
+                            &:nth-child(2) {
+                                @apply
+                                w-0 absolute top-0;
+                            }
+                        }
+                    }
+
+                    .header-nav {
+                        @apply
+                        h-full;
+                    }
                 }
-              }
             }
-          }
         }
-      }
     }
-  }
+}
+
+html.sticky-active {
+    #header {
+        @apply
+        transition-all ease-in-out duration-300;
+
+        .header-body {
+            @apply
+            transition-all ease-in-out duration-300
+            bg-white;
+
+            .header-container {
+                .header-row {
+                    .header-column {
+                        .header-logo {
+                            img {
+                                @apply
+                                w-0 absolute transition-all ease-in-out duration-500;
+
+                                &:nth-child(2) {
+                                    @apply
+                                    opacity-100 static;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 body {
-  &:after {
-    @apply
-    content-['']
-    absolute top-0 left-0
-    w-full h-0
-    bg-black/[.8] backdrop-blur-[20px]
-    pointer-events-none
-    transition-all ease-in-out duration-700;
-  }
+    &:after {
+        @apply
+        content-['']
+        absolute top-0 left-0
+        w-full h-0
+        bg-black/[.8] backdrop-blur-[20px]
+        pointer-events-none
+        transition-all ease-in-out duration-700;
+    }
 }

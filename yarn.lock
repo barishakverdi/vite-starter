@@ -12,6 +12,11 @@
   resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.17.18.tgz"
   integrity sha512-6tY+djEAdF48M1ONWnQb1C+6LiXrKjmqjzPNPWXhu/GzOHTHX2nh8Mo2ZAmBFg0kIodHhciEgUBtcYCAIjGbjQ==
 
+"@fancyapps/ui@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.npmjs.org/@fancyapps/ui/-/ui-5.0.17.tgz"
+  integrity sha512-NWxllyuFjNNs0CXnAnK4l2GbwUXqak0RAUNicH1AtbyNkI3pVsH+OuWMPE6aEdE7LVap91go8dPAZ840u/8K0Q==
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
@@ -728,6 +733,11 @@ source-map@^0.7.4:
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.4.tgz"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
+ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.2.tgz"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
+
 sucrase@^3.32.0:
   version "3.32.0"
   resolved "https://registry.npmjs.org/sucrase/-/sucrase-3.32.0.tgz"
@@ -745,6 +755,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+swiper@^9.3.1:
+  version "9.3.1"
+  resolved "https://registry.npmjs.org/swiper/-/swiper-9.3.1.tgz"
+  integrity sha512-YBDf0DLBLO7O4rwYHfz+HltkY4sDwKSbRf1it56rngpkYHxiKg0NkPMXAFmw2nGvMNQJwV14Dse47hQIifJzzA==
+  dependencies:
+    ssr-window "^4.0.2"
 
 tailwindcss@^3.3.2, tailwindcss@>=3.2.0:
   version "3.3.2"
