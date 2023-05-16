@@ -16,7 +16,6 @@
                 @apply
                 h-full
                 relative
-                px-[10px]
                 transition-transform ease-in-out duration-700;
 
                 > a {
@@ -24,7 +23,7 @@
                     inline-flex items-center
                     h-full px-[15px]
                     text-white
-                    transition-transform ease-in-out duration-700;
+                    transition-all ease-in-out duration-700;
                 }
 
                 .sub-menu {
@@ -68,7 +67,7 @@ html.sticky-active {
                     > a {
                         @apply
                         text-black
-                        transition-transform ease-in-out duration-300;
+                        transition-all ease-in-out duration-300;
                     }
 
                 }
@@ -85,7 +84,7 @@ body.dropdown-active {
                     > a {
                         @apply
                         text-black
-                        transition-transform ease-in-out duration-300;
+                        transition-all ease-in-out duration-300;
                     }
 
                 }
