@@ -52,6 +52,12 @@
                         @apply
                         h-full;
                     }
+
+                    .features {
+                        @apply
+                        w-full h-full
+                        flex items-center justify-end
+                    }
                 }
             }
         }
@@ -62,6 +68,26 @@
             pointer-events-none
             absolute left-0 top-0 -z-1
             transition-all ease-in-out duration-700;
+        }
+    }
+
+    .menu-btn {
+        @apply
+        hidden lg:flex
+        flex-col items-end gap-[4px]
+        cursor-pointer
+        w-max;
+
+        span {
+            @apply
+            block
+            w-[15px] h-[1px]
+            bg-white;
+
+            &:nth-child(2) {
+                @apply
+                w-[11px];
+            }
         }
     }
 }
@@ -97,6 +123,13 @@ html.sticky-active {
             .mover {
                 @apply
                 bg-white;
+            }
+
+            .menu-btn {
+                span {
+                    @apply
+                    bg-dark;
+                }
             }
         }
     }

@@ -1,12 +1,14 @@
-import Swiper from 'swiper/bundle';
+import Swiper, {Navigation, Pagination, Autoplay, Parallax} from 'swiper';
 import 'swiper/css/bundle';
 
 const swiper = new Swiper('.swiper', {
-    loop: false,
+    modules: [Navigation, Pagination],
 
     navigation: {
-        nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
     },
 
+
+    loop: false,
 });

@@ -21,9 +21,9 @@ afterHeaderBody.style.height = headerHeight + "px";
 /*Menu Item Hover Animation */
 menuItem.forEach(item => {
     item.addEventListener("mouseover", function () {
-        if (item.childElementCount < 2) return;
+        //if (item.childElementCount < 2) return;
 
-        if (item.lastElementChild.classList.contains("sub-menu") && window.innerWidth > 1024) {
+        if (item.querySelector(".sub-menu") && window.innerWidth > 1024) {
             body.classList.add("after:h-full", "dropdown-active", "overflow-y-hidden");
 
             if (window.scrollY === header.offsetTop) {
@@ -32,7 +32,7 @@ menuItem.forEach(item => {
                 coloredLogo.style.display = "block";
             }
 
-            afterHeaderBody.style.height = parseInt(headerHeight) + parseInt(item.lastElementChild.offsetHeight) + "px";
+            afterHeaderBody.style.height = parseInt(headerHeight) + parseInt(item.querySelector(".sub-menu").offsetHeight) + "px";
             afterHeaderBody.classList.add("bg-white");
         }
     })
@@ -85,4 +85,32 @@ window.onscroll = function (){
 }
 /* Sticky Header */
 
+
+/* Sidenav */
+let sideNav = document.getElementById("sideNav");
+let menuBtn = document.getElementById("menu-btn");
+let closeBtn = document.getElementById("close-button");
+menuBtn.addEventListener("click", () => {
+    sideNav.classList.toggle("open");
+    body.classList.toggle("overflow-y-hidden");
+    menuBtn.classList.toggle("!items-start");
+})
+
+closeBtn.addEventListener("click", () => {
+    sideNav.classList.remove("open");
+    body.classList.remove("overflow-y-hidden");
+    menuBtn.classList.remove("!items-start");
+})
+
+window.onload = () => {
+    menuItem.forEach(mobileItem => {
+        mobileItem.addEventListener("click", () => {
+
+            if (mobileItem.querySelector(".sub-menu") && window.innerWidth < 1024) {
+                mobileItem.querySelector(".sub-menu").classList.toggle("!block");
+            }
+        })
+    })
+}
+/* Sidenav */
 

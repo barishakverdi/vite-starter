@@ -8,11 +8,11 @@ export default {
     theme: {
         extend: {
             screens: {
-                sm: '576px',
-                md: '768px',
-                lg: '1024px',
-                xl: '1280px',
-                xxl: '1440px',
+                sm: {'max': '576px'},
+                md: {'max': '768px'},
+                lg: {'max': '1024px'},
+                xl: {'max': '1280px'},
+                xxl: {'max': '1440px'},
             },
 
             colors: {

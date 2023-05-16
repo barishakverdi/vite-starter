@@ -1,6 +1,6 @@
 .header-nav {
     @apply
-    flex justify-center items-center
+    flex lg:hidden justify-center items-center
     w-full;
 
     nav {
