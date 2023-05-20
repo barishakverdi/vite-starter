@@ -1,6 +1,6 @@
 #index-page {
-    h1 {
+    .content-container {
         @apply
-        text-dark text-[34px] font-medium
+        max-w-[1440px] w-full mx-auto px-5;
     }
 }
