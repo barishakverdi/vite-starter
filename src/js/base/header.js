@@ -107,7 +107,7 @@ window.onload = () => {
         mobileItem.addEventListener("click", () => {
 
             if (mobileItem.querySelector(".sub-menu") && window.innerWidth < 1024) {
-                mobileItem.querySelector(".sub-menu").classList.toggle("!block");
+                mobileItem.querySelector(".sub-menu").classList.toggle("sub-menu-open");
             }
         })
     })

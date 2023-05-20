@@ -54,8 +54,19 @@
 
                     > .sub-menu {
                         @apply
-                        hidden
-                        pl-[10px];
+                        opacity-0
+                        h-0
+                            pointer-events-none
+                        pl-[10px]
+                        transition-all ease-in-out duration-300;
+
+                        &.sub-menu-open {
+                            @apply
+                            opacity-100
+                            h-full
+                            pointer-events-auto
+                            transition-all ease-in-out duration-300;
+                        }
 
                         .menu-item {
                             @apply
