@@ -8,7 +8,7 @@ export default {
     build: {
         manifest: true,
         base: 'src/',
-        assetsDir: "assets",
+        assetsDir: "assets/",
         outDir: "public/",
 
         rollupOptions: {

@@ -3,6 +3,9 @@
 @include font-face("../../fonts/", "Inter", Inter-Light, 300, normal);
 @include font-face("../../fonts/", "Inter", Inter-Bold, 700, normal);
 
+//font awesome
+@import "src/style/config/all.css";
+
 //Your main font properties. You are free to change according to your project.
 * {
   @apply
