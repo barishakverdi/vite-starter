@@ -6,10 +6,9 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default {
     build: {
-        manifest: true,
-        base: 'src/',
         assetsDir: "assets/",
         outDir: "public/",
+        minify: true,
 
         rollupOptions: {
             input: {
