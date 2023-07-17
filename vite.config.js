@@ -6,14 +6,14 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default {
     build: {
-        assetsDir: "assets/",
-        outDir: "public/",
         minify: true,
+        cssCodeSplit: false,
+        manifest: true,
 
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                nested: resolve(__dirname, 'src/views/index.html'),
+                nested: resolve(__dirname, '/src/views/index.html'),
             },
         },
     },
