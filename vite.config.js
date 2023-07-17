@@ -1,19 +1,25 @@
 // vite.config.js
 import { resolve } from 'path';
+import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
 
 // @see https://vitejs.dev/config/
 
-export default {
+export default defineConfig({
     build: {
         minify: true,
+        outDir: "public/",
         cssCodeSplit: false,
         manifest: true,
 
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                nested: resolve(__dirname, '/src/views/index.html'),
+                nested: resolve(__dirname, 'src/views/index.html'),
+            },
+
+            output: {
+                dir: 'public/', // Ana dizin
             },
         },
     },
@@ -27,4 +33,4 @@ export default {
             partialDirectory: resolve(__dirname, 'src/views/block'),
         }),
     ],
-}
+})
