@@ -8,7 +8,7 @@ import handlebars from 'vite-plugin-handlebars';
 export default defineConfig({
     build: {
         minify: true,
-        outDir: "public/",
+        outDir: "dist/",
         cssCodeSplit: false,
         manifest: true,
 
@@ -16,10 +16,6 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 nested: resolve(__dirname, 'src/views/index.html'),
-            },
-
-            output: {
-                dir: 'public/', // Ana dizin
             },
         },
     },
