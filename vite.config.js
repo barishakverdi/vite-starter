@@ -8,7 +8,7 @@ import handlebars from 'vite-plugin-handlebars';
 export default defineConfig({
     build: {
         minify: true,
-        outDir: "dist/",
+        outDir: "../dist/",
         cssCodeSplit: false,
         manifest: true,
 
