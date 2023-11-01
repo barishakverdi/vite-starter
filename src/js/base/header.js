@@ -1,5 +1,5 @@
 let html = document.getElementsByTagName("html")[0];
-let body = document.getElementsByTagName("body")[0];
+export let body = document.getElementsByTagName("body")[0];
 let header = document.getElementById("header");
 let headerHeight = header.getAttribute('data-header-height');
 let headerStickyHeight = header.getAttribute('data-sticky-header-height');

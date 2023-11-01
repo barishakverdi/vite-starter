@@ -16,6 +16,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'src/index.html'),
                 nested: resolve(__dirname, 'src/views/index.html'),
+                aboutUs: resolve(__dirname, 'src/views/about-us.html'),
             },
         },
     },
