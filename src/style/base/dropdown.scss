@@ -43,4 +43,17 @@
             }
         }
     }
+
+    &.very-first {
+        @apply z-50;
+    }
+
+    input, ~ input {
+        @apply opacity-0 pointer-events-none invisible h-0 overflow-hidden;
+    }
+}
+
+.dropdown-outside {
+    @apply
+    fixed left-0 top-0 z-10 w-full h-full;
 }

@@ -1,28 +1,47 @@
-let customDropdown = document.querySelectorAll(".custom-dropdown");
-let options = document.querySelectorAll(".options");
-let option = document.querySelectorAll(".option");
+import {body} from "./header.js";
+const customDropdown = document.querySelectorAll(".custom-dropdown");
 
 customDropdown.forEach(dropdown => {
-    dropdown.addEventListener("click", function (e) {
+    let options = dropdown.querySelector(".options"),
+        option = options.querySelectorAll(".option"),
+        placeholder = dropdown.querySelector(".placeholder span"),
+        dropdownId = dropdown.getAttribute("data-dropdown-id"),
+        optionsId= options.getAttribute("data-options-id"),
+        placeholderId = placeholder.getAttribute("data-placeholder-id"),
+        formInput = dropdown.querySelector("input") || dropdown.nextElementSibling,
+        dropdownOutSide = document.createElement("div");
+    dropdownOutSide.className = "dropdown-outside";
 
-        options.forEach(options => {
-            if (dropdown.getAttribute("data-dropdown-id") === options.getAttribute("data-options-id")) {
-                dropdown.firstElementChild.lastElementChild.classList.toggle("rotate-180"); //angle-down-icon
+    dropdown.addEventListener("click", (e) => {
+        dropdown.classList.toggle("very-first");
+
+        if (dropdownOutSide && body.contains(dropdownOutSide)) {
+            body.removeChild(dropdownOutSide)
+        } else {
+            body.appendChild(dropdownOutSide)
+        }
+
+        if (e.target.nextElementSibling === options && dropdownId === optionsId) {
+            options = e.target.nextElementSibling;
+            options.classList.toggle("options-open");
+        }
+    })
+
+    option.forEach(item => {
+        item.addEventListener("click", (e) => {
+            if (e.target === item && placeholderId === dropdownId) {
+                placeholder.innerHTML = e.target.innerHTML;
                 options.classList.toggle("options-open");
+                formInput.value = e.target.innerText;
+                formInput.setAttribute("value", e.target.innerText);
+            }
+        })
 
-                option.forEach(option => {
-                    let placeholderText = option.parentElement.parentElement.querySelectorAll(".placeholder span");
-
-                    option.addEventListener("click", function (e) {
-                        placeholderText.forEach(placeholderText => {
-                            dropdown.querySelectorAll("input").value = placeholderText.innerHTML;
-
-                            if (placeholderText.getAttribute("data-placeholder-id") === dropdown.getAttribute("data-dropdown-id")) {
-                                placeholderText.innerHTML = option.firstElementChild.innerHTML;
-                            }
-                        })
-                    })
-                })
+        body.addEventListener("click", (event) => {
+            if (event.target === dropdownOutSide && body.contains(dropdownOutSide)) {
+                options.classList.toggle("options-open")
+                body.removeChild(dropdownOutSide)
+                dropdown.classList.remove("very-first")
             }
         })
     })

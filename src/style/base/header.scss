@@ -145,4 +145,10 @@ body {
         pointer-events-none
         transition-all ease-in-out duration-700;
     }
+
+    &.dropdown-active {
+        &:after {
+            @apply z-40
+        }
+    }
 }
