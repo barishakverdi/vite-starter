@@ -5,6 +5,7 @@ customDropdown.forEach(dropdown => {
     let options = dropdown.querySelector(".options"),
         option = options.querySelectorAll(".option"),
         placeholder = dropdown.querySelector(".placeholder span"),
+        arrow = dropdown.querySelector("i"),
         dropdownId = dropdown.getAttribute("data-dropdown-id"),
         optionsId= options.getAttribute("data-options-id"),
         placeholderId = placeholder.getAttribute("data-placeholder-id"),
@@ -24,6 +25,7 @@ customDropdown.forEach(dropdown => {
         if (e.target.nextElementSibling === options && dropdownId === optionsId) {
             options = e.target.nextElementSibling;
             options.classList.toggle("options-open");
+            arrow.classList.toggle("rotate-180");
         }
     })
 
@@ -32,8 +34,9 @@ customDropdown.forEach(dropdown => {
             if (e.target === item && placeholderId === dropdownId) {
                 placeholder.innerHTML = e.target.innerHTML;
                 options.classList.toggle("options-open");
+                arrow.classList.toggle("rotate-180");
                 formInput.value = e.target.innerText;
-                formInput.setAttribute("value", e.target.innerText);
+                console.log(formInput.value)
             }
         })
 
@@ -42,6 +45,7 @@ customDropdown.forEach(dropdown => {
                 options.classList.toggle("options-open")
                 body.removeChild(dropdownOutSide)
                 dropdown.classList.remove("very-first")
+                arrow.classList.toggle("rotate-180");
             }
         })
     })

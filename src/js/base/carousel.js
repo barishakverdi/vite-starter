@@ -1,5 +1,7 @@
 import Swiper, {Navigation, Pagination, Autoplay} from 'swiper';
-import 'swiper/css/bundle';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination, Autoplay],

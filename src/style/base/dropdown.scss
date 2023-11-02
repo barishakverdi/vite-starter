@@ -4,7 +4,7 @@
     .placeholder {
         @apply
         flex items-center justify-between
-        p-[16px]
+        p-[16px]  bg-white
         border border-[#738FB2] rounded-[8px];
 
         span {
@@ -55,5 +55,5 @@
 
 .dropdown-outside {
     @apply
-    fixed left-0 top-0 z-10 w-full h-full;
+    fixed left-0 top-0 z-10 w-full h-full bg-dark/[.05] backdrop-blur-[7px] transition-all duration-300;
 }

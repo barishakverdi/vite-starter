@@ -4,14 +4,6 @@ if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // [...this.elements].forEach(formElement => {
-        //     if (!formElement.checkValidity()) {
-        //         console.log(formElement.validationMessage);
-        //     } else {
-        //
-        //     }
-        // })
-
         [...this.elements].forEach(formElement => formControl(formElement));
 
         if (this.checkValidity() === true) {
@@ -21,19 +13,18 @@ if (contactForm) {
 
     }, true);
 
-    contactForm.addEventListener('formdata', function(e) {
-
-        // tüm form datamızı temsil ediyor
-        let data = e.formData;
-
-        // dilerseniz bunu bir ajax isteğiyle taçlandırabilirsiniz
-        var request = new XMLHttpRequest();
-        request.open("POST", "/ajax.php");
-        request.addEventListener('load', function(response) {
-            console.log(response)
-        });
-        request.send(data);
-    });
+    // contactForm.addEventListener('formdata', function(e) {
+    //
+    //     let data = e.formData;
+    //
+    //     //ajax
+    //     var request = new XMLHttpRequest();
+    //     request.open("POST", "/ajax.php");
+    //     request.addEventListener('load', function(response) {
+    //         console.log(response)
+    //     });
+    //     request.send(data);
+    // });
 
     [...contactForm.elements].forEach(formElement => {
         ['change', 'keyup'].forEach(method => formElement.addEventListener(method, e => formControl(e.target)));
@@ -48,8 +39,6 @@ if (contactForm) {
             } else {
                 error = document.createElement("small");
             }
-
-            console.log(error);
 
             error.className = "error-msg";
             error.innerText = formElement.validationMessage;

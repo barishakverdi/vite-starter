@@ -277,16 +277,18 @@ form button {
   }
 }
 .modal-container .modal.closed {
-  @apply pointer-events-none
+  @apply hidden
+            pointer-events-none
             translate-y-[100%];
 }
 .modal-container .modal.opened {
-  @apply pointer-events-auto
+  @apply flex
+            pointer-events-auto
             translate-y-[0];
 }
 .modal-container.closed {
   @apply pointer-events-none
-        duration-700
+        transition-all ease-in-out duration-700
         translate-y-[100%];
 }
 
@@ -295,7 +297,7 @@ form button {
 }
 .custom-dropdown .placeholder {
   @apply flex items-center justify-between
-        p-[16px]
+        p-[16px]  bg-white
         border border-[#738FB2] rounded-[8px];
 }
 .custom-dropdown .placeholder span {
@@ -332,18 +334,7 @@ form button {
 }
 
 .dropdown-outside {
-  @apply fixed left-0 top-0 z-10 w-full h-full;
-}
-
-body {
-  @apply relative overflow-x-hidden;
-}
-body:after, body:before {
-  @apply transition-all ease-in-out duration-700;
-}
-
-[id*=-page] {
-  @apply overflow-hidden;
+  @apply fixed left-0 top-0 z-10 w-full h-full bg-dark/[.05] backdrop-blur-[7px] transition-all duration-300;
 }
 
 #index-page .content-container {
@@ -425,6 +416,17 @@ body:after, body:before {
 #contact-page .contact {
   @apply py-[50px]
         w-full max-w-[1320px] mx-auto px-5;
+}
+
+body {
+  @apply relative overflow-x-hidden;
+}
+body:after, body:before {
+  @apply transition-all ease-in-out duration-700;
+}
+
+[id*=-page] {
+  @apply overflow-hidden;
 }
 
 @font-face {
