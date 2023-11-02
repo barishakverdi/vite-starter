@@ -35,7 +35,7 @@
   @apply block w-full h-max;
 }
 #header .header-body .header-container .header-row .header-column .header-logo img {
-  @apply w-[196px]
+  @apply w-[196px]  h-auto
                             transition-all ease-in-out duration-300;
 }
 #header .header-body .header-container .header-row .header-column .header-logo img:nth-child(2) {
@@ -166,13 +166,13 @@ body.dropdown-active .header-nav nav > ul > li > a {
 }
 
 .primary-btn {
-  @apply bg-primary
+  @apply bg-dark
     py-[15px] px-[25px]
     text-white text-[16px] leading-[16px] tracking-[-0.03em]
     transition-all duration-500;
 }
 .primary-btn:hover {
-  @apply bg-dark
+  @apply bg-white
         text-primary;
 }
 

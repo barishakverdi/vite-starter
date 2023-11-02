@@ -38,7 +38,7 @@
 
                         img {
                             @apply
-                            w-[196px]
+                            w-[196px]  h-auto
                             transition-all ease-in-out duration-300;
 
                             &:nth-child(2) {
