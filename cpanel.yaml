@@ -1,10 +1,8 @@
 ---
 deployment:
   tasks:
-    - git pull origin main  # Git deposundan güncelleme yap
-
-    - npm install          # Projede gerekli paketleri yükle
-    - npm run build         # Projeyi yeniden derle
-
+    - git pull origin main
+    - npm install
+    - npm run build
     - export DEPLOYPATH=/home/barishak/starter.barishakverdi.com/
-    - /bin/cp -R dist/* $DEPLOYPATH  # Derlenen dosyaları hedef klasöre kopyala
+    - /bin/cp -R dist $DEPLOYPATH
