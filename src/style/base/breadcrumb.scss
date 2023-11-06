@@ -8,3 +8,10 @@
         w-full h-full object-cover;
     }
 }
+
+body.not-index {
+    #header ~ .breadcrumb-section {
+        @apply
+        mt-[-90px]
+    }
+}

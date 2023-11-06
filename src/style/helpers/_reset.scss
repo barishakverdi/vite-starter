@@ -6,7 +6,3 @@ body {
         transition-all ease-in-out duration-700;
     }
 }
-
-[id*="-page"] {
-    @apply overflow-hidden;
-}

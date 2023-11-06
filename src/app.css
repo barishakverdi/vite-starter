@@ -5,9 +5,8 @@
 @tailwind utilities;
 /* Tailwind */
 #header {
-  @apply w-full
-    fixed z-50
-    transition-all ease-in-out duration-700;
+  @apply w-full relative z-50 h-[90px] top-0
+    transition-all ease-in-out duration-300;
 }
 #header .header-body {
   @apply h-full
@@ -70,7 +69,8 @@
 }
 
 html.sticky-active #header {
-  @apply transition-all ease-in-out duration-700;
+  @apply fixed h-[80px]
+        transition-all ease-in-out duration-300;
 }
 html.sticky-active #header .header-body {
   @apply transition-all ease-in-out duration-300
@@ -161,6 +161,10 @@ body.dropdown-active .header-nav nav > ul > li > a {
   @apply w-full h-full object-cover;
 }
 
+body.not-index #header ~ .breadcrumb-section {
+  @apply mt-[-90px];
+}
+
 .btn {
   @apply inline-block;
 }
@@ -242,7 +246,7 @@ form button {
 
 .modal-container {
   @apply fixed w-screen h-screen
-    top-0 left-0 z-50
+    top-0 left-0 z-50 translate-y-0
     transition-all ease-in-out duration-300;
 }
 .modal-container .modal {
@@ -288,8 +292,8 @@ form button {
 }
 .modal-container.closed {
   @apply pointer-events-none
-        transition-all ease-in-out duration-700
-        translate-y-[100%];
+        transition-all ease-in-out duration-300
+        top-[-100%];
 }
 
 .custom-dropdown {
@@ -347,6 +351,7 @@ form button {
     translate-x-[280px]
     w-[280px] h-screen p-[30px]
     bg-white
+    border border-transparent
     transition-all ease-in-out duration-700;
 }
 .sidenav .sidenav-wrapper .close-button {
@@ -401,13 +406,11 @@ form button {
                                 py-[15px];
 }
 .sidenav.open {
-  @apply translate-x-0;
+  @apply border-dark/[.1]
+        translate-x-0;
 }
 .sidenav.open ~ * {
   @apply translate-x-[-280px];
-}
-.sidenav ~ * {
-  @apply transition-all ease-in-out duration-700;
 }
 
 #contact-page {
@@ -423,10 +426,6 @@ body {
 }
 body:after, body:before {
   @apply transition-all ease-in-out duration-700;
-}
-
-[id*=-page] {
-  @apply overflow-hidden;
 }
 
 @font-face {

@@ -11,9 +11,15 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
     },
     speed: 700,
-    slidesPerView: 2,
+    slidesPerView: 1,
     loop: false,
     autoplay: {
       delay: 5000,
     },
+
+    breakpoints: {
+        992: {
+            slidesPerView: 2
+        }
+    }
 });

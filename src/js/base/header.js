@@ -1,22 +1,18 @@
-let html = document.getElementsByTagName("html")[0];
-export let body = document.getElementsByTagName("body")[0];
-let header = document.getElementById("header");
-let headerHeight = header.getAttribute('data-header-height');
-let headerStickyHeight = header.getAttribute('data-sticky-header-height');
-let whiteLogo = document.getElementById("logo-white");
-let coloredLogo = document.getElementById("logo-colored");
-let menuItem = document.querySelectorAll(".menu-item");
+const html = document.getElementsByTagName("html")[0];
+export const body = document.getElementsByTagName("body")[0];
+const header = document.getElementById("header");
+const headerOffset = document.createElement("div");
+const whiteLogo = document.getElementById("logo-white");
+const coloredLogo = document.getElementById("logo-colored");
+const menuItem = document.querySelectorAll(".menu-item");
 
-//Preparing header height before it gets sticky
-header.style.height = headerHeight + "px";
-
+header.insertAdjacentElement("afterend", headerOffset);
 
 //Preparing dropdown hover mover animation
-let afterHeaderBody = document.createElement("div");
+const afterHeaderBody = document.createElement("div");
 header.firstElementChild.appendChild(afterHeaderBody);
 afterHeaderBody.classList.add("mover");
-afterHeaderBody.style.height = headerHeight + "px";
-
+afterHeaderBody.style.height = header.offsetHeight + "px";
 
 /*Menu Item Hover Animation */
 menuItem.forEach(item => {
@@ -32,7 +28,7 @@ menuItem.forEach(item => {
                 coloredLogo.style.display = "block";
             }
 
-            afterHeaderBody.style.height = parseInt(headerHeight) + parseInt(item.querySelector(".sub-menu").offsetHeight) + "px";
+            afterHeaderBody.style.height = header.offsetHeight + parseInt(item.querySelector(".sub-menu").offsetHeight) + "px";
             afterHeaderBody.classList.add("bg-white");
         }
     })
@@ -46,7 +42,7 @@ menuItem.forEach(item => {
             coloredLogo.style.width = coloredLogo.getAttribute("data-sticky-width") + "px";
         }
 
-        afterHeaderBody.style.height = headerHeight + "px";
+        afterHeaderBody.style.height = header.offsetHeight + "px";
         afterHeaderBody.classList.remove("bg-white");
         //afterHeaderBody.style.backgroundColor = "transparent";
     })
@@ -56,40 +52,37 @@ menuItem.forEach(item => {
 
 /* Sticky Header */
 window.onscroll = function (){
+    headerOffset.style.height = header.offsetHeight + "px";
+
     if (window.scrollY > header.offsetTop) {
         html.classList.add("sticky-active");
-
-        header.classList.add("top-0");
-        header.style.height = headerStickyHeight + "px";
 
         coloredLogo.style.display = "block";
         coloredLogo.style.width = coloredLogo.getAttribute('data-sticky-width') + "px";
         whiteLogo.style.display = "none";
 
         //mover block height change
-        afterHeaderBody.style.height = headerStickyHeight + "px";
+        afterHeaderBody.style.height = header.offsetHeight + "px";
     }
 
     else {
+        headerOffset.style.height = "0";
         html.classList.remove("sticky-active");
-
-        header.classList.remove("top-0");
-        header.style.height = headerHeight + "px";
 
         coloredLogo.style.display = "none";
         whiteLogo.style.display = "block";
 
         //mover block height change
-        afterHeaderBody.style.height = headerHeight + "px";
+        afterHeaderBody.style.height = "0";
     }
 }
 /* Sticky Header */
 
 
 /* Sidenav */
-let sideNav = document.getElementById("sideNav");
-let menuBtn = document.getElementById("menu-btn");
-let closeBtn = document.getElementById("close-button");
+const sideNav = document.getElementById("sideNav");
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-button");
 menuBtn.addEventListener("click", () => {
     sideNav.classList.toggle("open");
     body.classList.toggle("overflow-y-hidden");

@@ -5,6 +5,7 @@
     translate-x-[280px]
     w-[280px] h-screen p-[30px]
     bg-white
+    border border-transparent
     transition-all ease-in-out duration-700;
 
     .sidenav-wrapper {
@@ -87,16 +88,12 @@
 
     &.open {
         @apply
+        border-dark/[.1]
         translate-x-0;
 
         ~ * {
             @apply
             translate-x-[-280px];
         }
-    }
-
-    ~ * {
-        @apply
-        transition-all ease-in-out duration-700;
     }
 }
