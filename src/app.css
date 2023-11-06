@@ -1,5 +1,5 @@
 /* Tailwind */
-@import "src/style/config/all.css";
+@import "style/config/all.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
