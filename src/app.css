@@ -173,7 +173,7 @@ body.not-index #header ~ .breadcrumb-section {
   @apply bg-dark
     py-[15px] px-[25px]
     text-white text-[16px] leading-[16px] tracking-[-0.03em]
-    transition-all duration-500;
+    transition-all duration-300;
 }
 .primary-btn:hover {
   @apply bg-white
