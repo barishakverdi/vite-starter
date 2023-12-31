@@ -8,11 +8,16 @@ export default {
     theme: {
         extend: {
             screens: {
-                sm: {'max': '576px'},
-                md: {'max': '768px'},
-                lg: {'max': '1024px'},
-                xl: {'max': '1280px'},
-                xxl: {'max': '1440px'},
+                'min-xxl': {'min': '1441px'},
+                'min-xl': {'min': '1281px'},
+                'min-lg': {'min': '1025px'},
+                'min-md': {'min': '769px'},
+                'min-sm': {'min': '577px'},
+                'xxl': {'max': '1440px'},
+                'xl': {'max': '1280px'},
+                'lg': {'max': '1024px'},
+                'md': {'max': '768px'},
+                'sm': {'max': '576px'},
             },
 
             colors: {
