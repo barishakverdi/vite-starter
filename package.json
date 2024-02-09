@@ -7,6 +7,7 @@
         "dev": "vite",
         "serve": "vite serve src/views",
         "build": "vite build",
+        "build-export": "vite build \nsed -i '' 's/..\\/assets\\//assets\\//g' dist/*.html\n sed -i ''  's/\\/assets\\//..\\/assets\\//g' dist/views/*.html\n sed -i '' 's/\\/assets\\//..\\/assets\\//g' dist/assets/*.css\nsed -i ''  's/\\/assets\\//..\\/assets\\//g' dist/assets/*.js\n",
         "preview": "vite preview",
         "compile": "sass --watch src/app.scss src/app.css"
     },
