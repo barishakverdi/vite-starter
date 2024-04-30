@@ -42,8 +42,8 @@ export default {
         },
     },
     plugins: [
-        require('@tailwindcss/container-queries'),
-        require('prettier-plugin-tailwindcss'),
+        // require('@tailwindcss/container-queries'),
+        // require('prettier-plugin-tailwindcss'),
     ],
 };
 

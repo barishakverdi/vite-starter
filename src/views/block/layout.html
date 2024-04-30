@@ -10,7 +10,7 @@
     <meta name="keywords" content="vite, starter, front-end, developer, development, starter pack, static websites">
 <!--    <meta name="robots" content="index, follow">-->
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="/app.css" type="text/css"/>
+    <link rel="stylesheet" href="/app.scss" type="text/css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -19,6 +19,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href=""/>
+    <script>
+        /*to prevent Firefox FOUC, this must be here*/
+        let FF_FOUC_FIX;
+    </script>
 </head>
 <body>
 

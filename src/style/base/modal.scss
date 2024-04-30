@@ -2,7 +2,7 @@
     @apply
     fixed w-screen h-screen
     top-0 left-0 z-50 translate-y-0
-    transition-all ease-in-out duration-300;
+    transition-all duration-500;
 
     .modal {
         @apply
@@ -11,7 +11,7 @@
         overflow-hidden
         flex items-center justify-center
         absolute top-0 left-0
-        transition-all ease-in-out duration-300;
+        transition-all duration-500;
 
         .close-button {
             @apply
@@ -49,21 +49,23 @@
             @apply
             hidden
             pointer-events-none
-            translate-y-[100%];
+            translate-y-full
+            transition-all duration-500;
         }
 
         &.opened {
             @apply
             flex
             pointer-events-auto
-            translate-y-[0];
+            translate-y-0
+            transition-all duration-500;
         }
     }
 
     &.closed {
         @apply
         pointer-events-none
-        transition-all ease-in-out duration-300
+        transition-all duration-500
         top-[-100%];
     }
 }
