@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
 import {Navigation, Autoplay, Pagination, Parallax, Grid, Controller, Thumbs, EffectCards, EffectCube, EffectFade, EffectCoverflow, EffectFlip, EffectCreative, FreeMode} from "swiper/modules";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/scss';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination, Autoplay],

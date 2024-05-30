@@ -9,7 +9,7 @@ export default defineConfig({
     build: {
         minify: true,
         outDir: "../dist/",
-        cssCodeSplit: false,
+        cssCodeSplit: true,
         manifest: true,
         emptyOutDir: true,
 
