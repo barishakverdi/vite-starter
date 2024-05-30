@@ -1,13 +1,13 @@
 .modal-container {
     @apply
     fixed w-screen h-screen
-    top-0 left-0 z-50 translate-y-0
+    top-0 left-0 z-50
+    bg-black/[.80] backdrop-blur-[20px]
     transition-all duration-500;
 
     .modal {
         @apply
         w-full h-full py-[80px]
-        bg-black/[.80] backdrop-blur-[20px]
         overflow-hidden
         flex items-center justify-center
         absolute top-0 left-0
@@ -47,17 +47,17 @@
 
         &.closed {
             @apply
-            hidden
+            opacity-0
+            -top-full
             pointer-events-none
-            translate-y-full
             transition-all duration-500;
         }
 
         &.opened {
             @apply
-            flex
+            opacity-100
+            top-0
             pointer-events-auto
-            translate-y-0
             transition-all duration-500;
         }
     }
@@ -65,7 +65,7 @@
     &.closed {
         @apply
         pointer-events-none
-        transition-all duration-500
-        top-[-100%];
+        opacity-0
+        transition-all duration-500;
     }
 }

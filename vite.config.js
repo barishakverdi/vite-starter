@@ -11,6 +11,7 @@ export default defineConfig({
         outDir: "../dist/",
         cssCodeSplit: false,
         manifest: true,
+        emptyOutDir: true,
 
         rollupOptions: {
             input: {
@@ -26,6 +27,7 @@ export default defineConfig({
 
     css: {
         devSourcemap: true,
+        preprocessorMaxWorkers: true
     },
 
     plugins: [
