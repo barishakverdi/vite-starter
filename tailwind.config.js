@@ -6,20 +6,26 @@ export default {
         './index.html',
     ],
     theme: {
+        screens: {
+            'min-xxl': {'min': '1441px'},
+            'min-xl': {'min': '1281px'},
+            'min-lg': {'min': '1025px'},
+            'min-md': {'min': '769px'},
+            'min-sm': {'min': '577px'},
+            'xxl': {'max': '1440px'},
+            'xl': {'max': '1280px'},
+            'lg': {'max': '1024px'},
+            'md': {'max': '768px'},
+            'sm': {'max': '576px'},
+        },
+        container: {
+            center: true,
+            padding: "15px"
+        },
+        fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+        },
         extend: {
-            screens: {
-                'min-xxl': {'min': '1441px'},
-                'min-xl': {'min': '1281px'},
-                'min-lg': {'min': '1025px'},
-                'min-md': {'min': '769px'},
-                'min-sm': {'min': '577px'},
-                'xxl': {'max': '1440px'},
-                'xl': {'max': '1280px'},
-                'lg': {'max': '1024px'},
-                'md': {'max': '768px'},
-                'sm': {'max': '576px'},
-            },
-
             colors: {
                 primary: '#137ff2',
                 dark: '#091929',
@@ -39,6 +45,15 @@ export default {
             flexGrow: {
                 1: '1',
             },
+            animation: {
+                ticker: 'ticker 20s linear infinite',
+            },
+            keyframes: {
+                ticker: {
+                    from: {transform: "translate3d(0,0,0)",visibility: "visible"},
+                    to: {transform: "translate3d(-100%,0,0)",},
+                }
+            }
         },
     },
     plugins: [
@@ -46,4 +61,3 @@ export default {
         // require('prettier-plugin-tailwindcss'),
     ],
 };
-
