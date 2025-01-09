@@ -22,11 +22,15 @@
   },
   "dependencies": {
     "@alpinejs/collapse": "^3.14.8",
+    "@fancyapps/ui": "^5.0.36",
     "@igorkowalczyk/is-browser": "^5.0.4",
     "@vituum/vite-plugin-postcss": "^1.1.0",
     "alpinejs": "^3.14.8",
+    "gsap": "^3.12.5",
     "handlebars": "^4.7.8",
     "handlebars-helpers": "^0.10.0",
+    "lenis": "^1.1.19",
+    "swiper": "^11.2.0",
     "tailwind-scrollbar": "^3.1.0"
   }
 }
