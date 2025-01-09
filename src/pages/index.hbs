@@ -1,0 +1,39 @@
+{{> partials/header.hbs }}
+
+<script>
+    async function content() {
+        const response = await fetch("./src/data/data.json");
+        const json = await response.json();
+        return json.list;
+    }
+</script>
+
+<template id="button">
+    <button class="bg-black text-white rounded px-6 py-4">
+        <span x-text="item.title"></span>
+    </button>
+</template>
+
+<section>
+    <div x-data="{ activeIndex: -1 }">
+        <template x-for="(item, i) in content" :key="i">
+            <div>
+                <div @click="activeIndex = (activeIndex === i) ? -1 : i;"
+                     class="cursor-pointer px-4 py-2 bg-primary-100 rounded-sm text-2xl text-black"
+                     x-text="item.title">
+                </div>
+                <div x-show="activeIndex === i" x-collapse.duration.300ms>
+                    <div x-text="item.description" class="text-xl text-primary-700 px-4">
+                    </div>
+                    <img src="assets/image/vite.svg" alt="" width="32" height="32" class="size-8">
+                    <x-component url="{{resolve-from-root "partials/components/button.hbs"}}" x-data="item"></x-component>
+                    <x-component template="button"></x-component>
+                    <x-component url="{{resolve-from-root "partials/components/modal.hbs"}}"></x-component>
+                </div>
+            </div>
+        </template>
+    </div>
+    <x-component url="{{resolve-from-root "partials/components/modal.hbs"}}"></x-component>
+
+</section>
+{{> partials/footer.hbs }}
