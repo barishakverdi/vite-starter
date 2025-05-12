@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import path from 'path';
 import vituum from 'vituum'
-import tailwindcss from '@vituum/vite-plugin-tailwindcss'
-import postcss from '@vituum/vite-plugin-postcss'
+// import tailwindcss from '@vituum/vite-plugin-tailwindcss'
+import tailwindcss from '@tailwindcss/vite'
+// import postcss from '@vituum/vite-plugin-postcss'
 import handlebars from '@vituum/vite-plugin-handlebars'
 import fs from 'fs/promises';
 
@@ -80,7 +81,7 @@ const moveComponentsToDist = () => ({
 export default defineConfig({
     plugins: [vituum({
         input: ['./src/style/*.{css,pcss,scss,sass,less,styl,stylus}', './src/script/*.{js,ts,mjs}'],
-    }), tailwindcss(), postcss(), handlebars({
+    }), tailwindcss(), handlebars({
         root: "./src",
         helpers: {
             'resolve-from-root': (relativePath) => path.join('/src', relativePath),
@@ -101,11 +102,15 @@ export default defineConfig({
             }
         },
     }), headFix(), moveDataToDist(), moveComponentsToDist()],
+    server: {
+        host: "0.0.0.0"
+    },
     build: {
         emptyOutDir: true,
         modulePreload: {
             polyfill: false,
         },
+        legalComments: "none",
         rollupOptions: {
             output: {
                 chunkFileNames: 'assets/script/[name].js',

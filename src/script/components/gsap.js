@@ -1,11 +1,17 @@
-import { gsap } from "gsap";
 import Lenis from 'lenis'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Observer } from "gsap/Observer";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { gsap } from "gsap";
 
-gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, MotionPathPlugin);
+import { CustomEase } from "gsap/CustomEase";
+
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// ScrollSmoother requires ScrollTrigger
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(DrawSVGPlugin,MotionPathPlugin,ScrollTrigger,ScrollSmoother,ScrollToPlugin,SplitText,CustomEase);
 
 // Initialize Lenis
 const lenis = new Lenis({
