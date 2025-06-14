@@ -8,8 +8,10 @@
     }
 </script>
 
+{{!-- Build aşamasında sayfa için template'lerde css dosyaları gelmiyor --}}
 <template id="button">
     <button class="bg-black text-white rounded px-6 py-4">
+        <link rel="stylesheet" href="{{resolve-from-root "/style/app.css"}}">
         <span x-text="item.title"></span>
     </button>
 </template>
@@ -35,9 +37,9 @@
     </div>
     <x-component url="{{resolve-from-root "partials/components/modal.hbs"}}"></x-component>
 
-    <div class="container">
+    <div class="container swiper">
         <div class="w-full h-[220px] overflow-y-auto" data-lenis-prevent="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos ipsam iure magnam. Animi
+            <p class="clamp-[text,24px,36px] leading-tight font-bold text-[#DDD]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos ipsam iure magnam. Animi
                 atque commodi dolore eaque eius eligendi, eveniet ex exercitationem inventore iure iusto labore
                 laboriosam modi molestias mollitia nam nobis nulla obcaecati omnis optio porro quis quod reiciendis
                 repellendus soluta totam vero voluptatum! Eaque facere maiores nesciunt officia praesentium. Architecto,

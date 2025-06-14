@@ -1,4 +1,5 @@
-@import "swiper/css/bundle";
+/*@import "swiper/css/bundle";*/
+@import "swiper/css";
 @import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 html.lenis,
@@ -125,40 +126,4 @@ html.lenis body {
     font-display: swap;
     font-style: normal;
     ascent-override: 100%;
-}
-
-/* Reset */
-*, *:before, *:after { @apply box-border !outline-none; }
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video { @apply m-4 p-0 border-none text-[100%] [font:inherit] align-baseline [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [text-size-adjust:none]; }
-body { @apply text-[100%] leading-normal font-sans; }
-input, form, table, select, textarea, button { @apply font-sans text-[100%] leading-normal rounded-none !appearance-none resize-none outline-none border-none bg-transparent; }
-select::-ms-expand { @apply !hidden; }
-*, *:focus, *:focus-visible, *:hover, *:active, *::before, *::after { @apply !outline-none; }
-footer, header, nav, section, main, article { @apply block; }
-a, a:hover, a:active, a:focus, a:visited { @apply decoration-0; }
-ol, ul, menu { @apply list-none m-0 p-0; }
-/*blockquote, q { @apply [quotes:none]; }*/
-/*blockquote:before, blockquote:after, q:before, q:after { @apply content-none; }*/
-table { @apply border-spacing-0 border-collapse; }
-input { @apply appearance-none; }
-svg { @apply overflow-visible block; }
-em { @apply italic; }
-strong { @apply font-bold; }
-input[type=search]::-ms-clear { @apply hidden h-0 w-0; }
-input[type=search]::-ms-reveal { @apply hidden h-0 w-0; }
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { @apply hidden; }
-input[type="date"]::-webkit-inner-spin-button { @apply hidden appearance-none; }
-input[type="date"]::-webkit-calendar-picker-indicator { @apply hidden appearance-none; }
-input[type="file"]::-webkit-file-upload-button { @apply cursor-pointer }
-.smart-menu { @apply will-change-[height,_transform] [&.scroll-down]:top-0 [&.scroll-down]:translate-y-0 [&.scroll-up.scroll-down]:-translate-y-full }
-select:required:invalid { @apply text-black/50; }
-option[value=""][disabled] { @apply hidden; }
-option { @apply text-black; }
-
-/* Custom Styles */
-body {
-    @apply chrome:bg-primary m-4;
 }
